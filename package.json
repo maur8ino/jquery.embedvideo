@@ -1,0 +1,32 @@
+{
+  "name"            : "jquery.embedvideo",
+  "title"           : "jQuery Embed Video",
+  "version"         : "1.0.0",
+  "author"          : {
+    "name"  : "Mauro Verrocchio",
+    "email" : "mauroverrocchio@gmail.com",
+    "url"   : "http://www.mauroverrocchio.eu"
+  },
+  "repository" : {
+    "type" : "git",
+    "url"  : "git://github.com/maur8ino/jquery.embedvideo.git"
+  },
+  "description" : "Looking to create a jQuery plugin in plain Javascript using Test-driven development? If so, MiniBoilerplate is what you've been looking for.",
+  "keywords": ["development", "workflow", "rapid", "test", "jasmine", "jquery", "plugin", "headless", "javascript", "guard", "boilerplate", "default", "toolkit", "base"],
+  "licenses": [{
+    "type": "MIT"
+  }],
+  "devDependencies" : {
+    "grunt": "~0.4",
+    "grunt-init": "~0.2",
+    "grunt-notify": "~0.1",
+    "grunt-contrib-jshint": "~0.1",
+    "grunt-contrib-clean": "~0.4",
+    "grunt-contrib-uglify": "~0.1",
+    "grunt-contrib-jasmine": "~0.2",
+    "grunt-contrib-watch": "~0.1"
+  },
+  "scripts": {
+    "test": "grunt travis"
+  }
+}
