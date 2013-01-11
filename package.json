@@ -1,7 +1,7 @@
 {
   "name"            : "jquery.embedvideo",
   "title"           : "jQuery Embed Video",
-  "version"         : "1.0.0",
+  "version"         : "1.0.1",
   "author"          : {
     "name"  : "Mauro Verrocchio",
     "email" : "mauroverrocchio@gmail.com",
@@ -11,20 +11,20 @@
     "type" : "git",
     "url"  : "git://github.com/maur8ino/jquery.embedvideo.git"
   },
-  "description" : "Looking to create a jQuery plugin in plain Javascript using Test-driven development? If so, MiniBoilerplate is what you've been looking for.",
-  "keywords": ["development", "workflow", "rapid", "test", "jasmine", "jquery", "plugin", "headless", "javascript", "guard", "boilerplate", "default", "toolkit", "base"],
+  "description" : "A jQuery plugin to embed video from Youtube and Facebook (and more to come in future) in a html container.",
+  "keywords": ["video", "youtube", "facebook", "embed", "test", "jasmine", "jquery", "plugin", "headless", "javascript"],
   "licenses": [{
     "type": "MIT"
   }],
   "devDependencies" : {
-    "grunt": "0.4.0rc4",
-    "grunt-init": "~0.2",
-    "grunt-notify": "~0.1",
-    "grunt-contrib-jshint": "~0.1",
-    "grunt-contrib-clean": "~0.4",
-    "grunt-contrib-uglify": "~0.1",
-    "grunt-contrib-jasmine": "~0.2",
-    "grunt-contrib-watch": "~0.1"
+    "grunt": "0.4.0rc5",
+    "grunt-init": "0.2.0rc3",
+    "grunt-contrib-watch": "0.2.0rc5",
+    "grunt-notify": "0.1.3",
+    "grunt-contrib-jshint": "0.1.1rc5",
+    "grunt-contrib-clean": "0.4.0rc5",
+    "grunt-contrib-uglify": "0.1.1rc5",
+    "grunt-contrib-jasmine": "0.3.0rc5"
   },
   "scripts": {
     "test": "grunt travis"

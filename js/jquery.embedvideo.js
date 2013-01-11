@@ -105,9 +105,4 @@
         });
     };
 
-    // Adding autoScale plugins array
-    $.fn[pluginName].prototype = {
-        _autoScalePlugins: []
-    };
-
 })(jQuery, window, document);
