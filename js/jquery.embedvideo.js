@@ -11,7 +11,6 @@
         aspectRatio: 1.77777778,
         width: 480,
         isFluid: false,
-        autoScale: true,
         iframeUrl: false,
         iframeClass: 'youtube-player',
         videoMp4Url: false,
@@ -32,7 +31,7 @@
             this.options.height = this.options.height || (1 / this.options.aspectRatio * parseInt(this.options.width, 10));
             // Setting the dimensions object 
             this.options.dimensions = this.options.isFluid ?
-                { width: '100%', 'data-videoFluidResize': '' } :
+                { width: '100%' } :
                 { width: this.options.width, height: this.options.height };
         
             // Building the embed video jquery object            
@@ -54,14 +53,14 @@
                     this.$embeddedVideo.append($('<source/>', {
                         'src': this.options.videoMp4Url,
                         'type': 'video/mp4'
-                     }));
+                    }));
                 }
                 if (this.options.videoOggUrl) {
                     // If the ogg video source was set, appends a <source/> object
                     this.$embeddedVideo.append($('<source/>', {
                         'src': this.options.videoOggUrl,
                         'type': 'video/ogg'
-                     }));
+                    }));
                 }
 
                 if (this.options.videoFlashUrl) {
@@ -81,18 +80,15 @@
             
             // Appending the embed video object to $element
             this.$element.append(this.$embeddedVideo);
-
-            // Enabling auto scaling at window resize
-            if (this.options.isFluid && this.options.autoScale) {
-                $(window).on('resize', this.fuildScale);
-            }
         },
 
         fluidScale: function() {
             if (this.options.isFluid) {
                 this.options.width = this.$element.width();
                 this.options.height = (1 / this.options.aspectRatio * this.options.width);
-                this.$embeddedVideo.attr({ width: this.options.width, height: this.options.height});
+                this.$embeddedVideo.attr({ width: this.options.width, height: this.options.height });
+                this.$embeddedVideo.find('object').attr({ width: this.options.width, height: this.options.height });
+                this.$embeddedVideo.find('object embed').attr({ width: this.options.width, height: this.options.height });
             }
         }
     };
