@@ -14,7 +14,8 @@
         iframeUrl: false,
         iframeClass: 'youtube-player',
         videoMp4Url: false,
-        videoOggUrl: false
+        videoOggUrl: false,
+        videoFlashUrl: false
     };
 
     function Plugin(element, options) {
