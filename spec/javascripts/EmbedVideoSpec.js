@@ -41,6 +41,11 @@ describe('EmbedVideo', function() {
                 var plugin = this.$element.data('plugin_embedvideo');
                 return expect(this.$element).toContain('video');
             });
+            it('should have "poster" attribute in $embeddedVideo', function() {
+                this.$element.embedvideo({ videoPoster: 'poster.gif' });
+                var $video = this.$element.find('video');
+                return expect($video).toHaveAttr('poster', 'poster.gif');
+            });
             describe('videoMp4Url', function() {
                 beforeEach(function() {
                     this.$element.embedvideo({ videoMp4Url: 'youtube' });
@@ -70,7 +75,7 @@ describe('EmbedVideo', function() {
         });
         describe('flash embedded behaviour', function() {
             beforeEach(function() {
-                this.$element.embedvideo({ videoFlashUrl: 'someFlashObject', width: 576, aspectRatio: 1.5 });
+                this.$element.embedvideo({ videoFlashUrl: 'someFlashObject', width: 576, aspectRatio: 1.5, videoPoster: 'poster.gif' });
                 return this.plugin = this.$element.data('plugin_embedvideo');
             });
             it('should contain an object element', function() {
@@ -101,6 +106,10 @@ describe('EmbedVideo', function() {
                 var $embed = this.$element.find('video object embed'),
                     expectHeight = 1 / 1.5 * 576;
                 return expect($embed).toHaveAttr({ width: '576', height: expectHeight });
+            });
+            it('should have an <img> tag inside the object', function() {
+                var $embed = this.$element.find('video object');
+                return expect($embed).toContain('img');
             });
         });
         describe('plugin scale behaviour', function() {

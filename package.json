@@ -1,7 +1,7 @@
 {
   "name"            : "jquery.embedvideo",
   "title"           : "jQuery Embed Video",
-  "version"         : "1.0.1",
+  "version"         : "1.0.2",
   "author"          : {
     "name"  : "Mauro Verrocchio",
     "email" : "mauroverrocchio@gmail.com",

@@ -10,9 +10,11 @@
     var defaults = {
         aspectRatio: 1.77777778,
         width: 480,
+        height: false,
         isFluid: false,
         iframeUrl: false,
         iframeClass: 'youtube-player',
+        videoPoster: false,
         videoMp4Url: false,
         videoOggUrl: false,
         videoFlashUrl: false
@@ -49,6 +51,9 @@
                 // Using the video for everybody method
                 // http://camendesign.com/code/video_for_everybody
                 this.$embeddedVideo = $('<video/>').attr($.extend({}, { 'controls': '' }, this.options.dimensions));
+                if (this.options.videoPoster) {
+                    this.$embeddedVideo.attr('poster', this.options.videoPoster);
+                }
                 if (this.options.videoMp4Url) {
                     // If the mp4 video source was set, appends a <source/> object
                     this.$embeddedVideo.append($('<source/>', {
@@ -63,7 +68,6 @@
                         'type': 'video/ogg'
                     }));
                 }
-
                 if (this.options.videoFlashUrl) {
                     // If the flash video source was set, appends a <object/> and <embed/> object
                     this.$embeddedVideo
@@ -76,6 +80,10 @@
                                 'allowfullscreen': 'true' }, this.options.dimensions))
                             )
                         );
+                    if (this.options.videoPoster) {
+                        this.$embeddedVideo.find('object')
+                            .append($('<img/>').attr($.extend({}, { 'src': this.options.videoPoster }, this.options.dimensions)));
+                    }
                 }
             }
             
