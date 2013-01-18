@@ -103,7 +103,7 @@ describe('EmbedVideo', function() {
                 return expect($embed).toHaveAttr({ width: '576', height: expectHeight });
             });
         });
-        describe('plgin scale behaviour', function() {
+        describe('plugin scale behaviour', function() {
             it('should scale element', function() {
                 this.$element.width(576);
                 this.$element.embedvideo({ aspectRatio: 1.5, isFluid: true });
