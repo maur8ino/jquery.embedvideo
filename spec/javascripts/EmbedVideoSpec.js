@@ -108,10 +108,33 @@ describe('EmbedVideo', function() {
                 this.$element.width(576);
                 this.$element.embedvideo({ aspectRatio: 1.5, isFluid: true });
                 var $video = this.$element.find('video'),
-                    plugin = this.$element.data('plugin_embedvideo');
+                    plugin = this.$element.data('plugin_embedvideo'),
+                    expectHeight = 384 * 480 / 576;
                 this.$element.width(480);
                 plugin.fluidScale();
-                return expect($video).toHaveAttr('height', 384 * 480 / 576);
+                return expect($video).toHaveAttr({ 'width': 480, 'height': expectHeight });
+            });
+            describe('plugin flash element scale behaviour', function() {
+                beforeEach(function() {
+                    this.$element.width(576);
+                    this.$element.embedvideo({ videoFlashUrl: 'someFlashObject', aspectRatio: 1.5, isFluid: true });
+                    this.$video = this.$element.find('video');
+                    this.$object = this.$video.find('object');
+                    this.$embed = this.$object.find('embed');
+                    this.plugin = this.$element.data('plugin_embedvideo');
+                    this.expectHeight = 384 * 480 / 576;
+                    this.$element.width(480);
+                    this.plugin.fluidScale();
+                });
+                it('should scale video element', function() {
+                    return expect(this.$video).toHaveAttr({ 'width': 480, 'height': this.expectHeight });
+                });
+                it('should scale object element', function() {
+                    return expect(this.$object).toHaveAttr({ 'width': 480, 'height': this.expectHeight });
+                });
+                it('should scale embed element', function() {
+                    return expect(this.$embed).toHaveAttr({ 'width': 480, 'height': this.expectHeight });
+                });
             });
         });
     });
