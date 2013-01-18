@@ -4,7 +4,7 @@ A jQuery plugin to embed video from Youtube and Facebook (and more to come in fu
 
 ## Version
 
-v1.0.1 Develop
+v1.0.2 Develop
 
 ## Usage
 
