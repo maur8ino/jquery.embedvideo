@@ -1,5 +1,5 @@
 /*
- *  Project: embedvideo
+ *  Project: jQuery Embed Video
  *  Description: A jQuery plugin to embed video from Youtube and Facebook (and more to come in future) in a html container
  *  Author: Mauro Verrocchio <mauroverrocchio@gmail.com>
  *  License: MIT
