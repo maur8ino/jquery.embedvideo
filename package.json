@@ -17,6 +17,7 @@
     "type": "MIT"
   }],
   "devDependencies" : {
+    "grunt-cli": "*",
     "grunt": "0.4.0rc5",
     "grunt-init": "0.2.0rc3",
     "grunt-contrib-watch": "0.2.0rc5",

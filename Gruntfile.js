@@ -55,5 +55,5 @@ module.exports = function(grunt) {
   grunt.registerTask('compress', ['clean', 'jshint', 'uglify']);
 
   // Travis CI task.
-//  grunt.registerTask('travis', 'coffee jasmine');
+  grunt.registerTask('travis', 'default');
 };
