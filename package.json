@@ -18,8 +18,6 @@
   }],
   "devDependencies" : {
     "grunt": "*",
-    "grunt-cli": "*",
-    "grunt-init": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-clean": "*",
@@ -27,6 +25,6 @@
     "grunt-contrib-jasmine": "*"
   },
   "scripts": {
-    "test": "grunt travis"
+    "test": "grunt travis --verbose"
   }
 }
