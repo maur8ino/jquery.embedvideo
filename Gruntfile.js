@@ -14,6 +14,10 @@ module.exports = function(grunt) {
         "*/\n"
     },
     jshint: {
+      options: {
+        boss: false,
+        browser: true
+      },
       files: ['Gruntfile.js', 'js/*[^(min)].js', 'spec/javascripts/*Spec.js']
     },
     jasmine: {

@@ -1,4 +1,4 @@
-
+/* jshint -W093 */
 describe('Plugin', function() {
     var options;
     options = {

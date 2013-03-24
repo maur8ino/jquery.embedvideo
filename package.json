@@ -17,14 +17,14 @@
     "type": "MIT"
   }],
   "devDependencies" : {
+    "grunt": "*",
     "grunt-cli": "*",
-    "grunt": "0.4.0rc5",
-    "grunt-init": "0.2.0rc3",
-    "grunt-contrib-watch": "0.2.0rc5",
-    "grunt-contrib-jshint": "0.1.1rc5",
-    "grunt-contrib-clean": "0.4.0rc5",
-    "grunt-contrib-uglify": "0.1.1rc5",
-    "grunt-contrib-jasmine": "0.3.0rc5"
+    "grunt-init": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-jasmine": "*"
   },
   "scripts": {
     "test": "grunt travis"
