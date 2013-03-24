@@ -1,5 +1,7 @@
 # jQuery Embed Video
 
+[![Build Status](https://travis-ci.org/maur8ino/jquery.embedvideo.png?branch=develop)](https://travis-ci.org/maur8ino/jquery.embedvideo)
+
 A jQuery plugin to embed video from Youtube and Facebook (and more to come in future) in a html container. Support fuild resize of the container for working with media queries.
 
 ## Version
